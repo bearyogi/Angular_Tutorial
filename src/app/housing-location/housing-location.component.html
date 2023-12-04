@@ -1,1 +1,18 @@
-<p>housing-location works!</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Locations</title>
+</head>
+<body>
+<section class="listing">
+  <img class="listing-photo" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}">
+  <h2 class="listing-heading">{{ housingLocation.name }}</h2>
+  <p class="listing-location">{{ housingLocation.city}}, {{housingLocation.state }}</p>
+  <a [routerLink]="['/details', housingLocation.id]">Learn More</a>
+</section>
+</body>
+</html>
